@@ -45,6 +45,21 @@ services:
     networks:
       - ss3-network
 
+  order-service:
+    build:
+      context: ./order-service
+    container_name: ss3-order-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/order_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=123456
+    depends_on:
+      - postgres
+    networks:
+      - ss3-network
+
 networks:
   ss3-network:
     driver: bridge

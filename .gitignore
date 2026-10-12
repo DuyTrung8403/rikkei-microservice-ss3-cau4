@@ -1,0 +1,58 @@
+### 1. IDE & Editor Files ###
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.vscode/
+*.swp
+*.swo
+*~
+
+### 2. Gradle Build, Cache & Output ###
+.gradle/
+**/build/
+**/.gradle/
+build/
+
+# Do NOT ignore Gradle wrapper jar & scripts:
+!gradle/wrapper/gradle-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+!gradlew
+!**/gradlew
+!gradlew.bat
+!**/gradlew.bat
+
+### 3. Java Compiled & Package Artifacts ###
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### 4. Database & Docker Local Data ###
+postgres-data/
+pgdata/
+data/
+*.sqlite
+docker-compose.override.yml
+
+### 5. OS Generated Files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+### 6. Environment & Secrets ###
+*.env
+*.env.*
+!*.env.example
